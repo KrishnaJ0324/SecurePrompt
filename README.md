@@ -21,7 +21,7 @@ SecurePrompt integrates an Open PII Masking 500K English Anonymizer model to det
 
 🎥 Demo Video
 
-Check out the working demo of SecurePrompt on YouTube: [(https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/vqDXX9u62uY?feature=shared)
+Check out the working demo of SecurePrompt on YouTube: [![Secureprompt Project Demo](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/vqDXX9u62uY?feature=shared)
 
 🛠️ Tech Stack
 Layer	Technologies / Tools
