@@ -1,0 +1,63 @@
+{
+    "manifest_version": 3,
+    "name": "PiM - Privacy Information Mask",
+    "version": "2.0.0",
+    "description": "The Privacy Information Mask (PiM) is a browser extension designed to seamlessly protect sensitive information while using AI tools online. It automatically identifies and masks private data such as URLs, IP addresses, email addresses, phone numbers, and other personal information within any text input, ensuring that personal details remain secure. Perfect for safeguarding privacy in AI-driven interactions, it helps prevent the exposure of sensitive data in accordance with privacy regulations like GDPR, providing users with enhanced privacy control and peace of mind when using AI tools.",
+    "author": "Dreaserous Productions",
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://chatgpt.com/*",
+        "http://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "http://chat.openai.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_icon": {
+            "16": "assets/logos/icon-16.png",
+            "128": "assets/logos/icon-16.png"
+        }
+    },
+    "icons": {
+        "16": "assets/logos/icon-16.png",
+        "128": "assets/logos/icon-128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://chatgpt.com/*",
+                "http://chatgpt.com/*",
+                "https://chat.openai.com/*",
+                "http://chat.openai.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "lib/transformers.js",
+                "models/*",
+                "assets/logos/*.png",
+                "popup.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PiM Settings</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .setting {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        .status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>AI Privacy Extension Settings</h3>
+
+    <div class="setting">
+        <label for="phoneReplacement">Phone Number Replacement:</label>
+        <input type="text" id="phoneReplacement" placeholder="[PHONE NUMBER]">
+    </div>
+
+    <div class="setting">
+        <label for="ipReplacement">IP Address Replacement:</label>
+        <input type="text" id="ipReplacement" placeholder="[ran.ran.ip.addr]">
+    </div>
+
+    <div class="setting">
+        <label for="emailReplacement">Email Replacement:</label>
+        <input type="text" id="emailReplacement" placeholder="[email@gmail.com]">
+    </div>
+
+    <div class="setting">
+        <label for="urlReplacement">URL Replacement:</label>
+        <input type="text" id="urlReplacement" placeholder="[example.com]">
+    </div>
+
+    <button id="saveSettings">Save Settings</button>
+    <button id="testModel">Test AI Model</button>
+
+    <div id="status" style="display: none;"></div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
